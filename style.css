@@ -69,11 +69,26 @@ nav a:hover {
 
 /* Styling sections */
 section {
-    padding: 40px 20px; /* Padding adjusted */
+    display: flex; /* Use flexbox */
+    padding: 300px 20px; /* Padding adjusted */
     background-color: #fff; /* White background */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
     margin-bottom: 20px; /* Margin added between sections */
+}
+
+.section-text {
+    flex: 1; /* Take remaining space */
+    margin-right: 20px; /* Adjust margin between text and image */
+}
+
+.section-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 600px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 200px; /* Adjust margin between text and image */
+    margin-top: -100px; /* Adjust the image upward */
 }
 
 /* Styling footer */
@@ -82,7 +97,9 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: -100px;
+    left: 0;
     width: 100%;
+    transition: bottom 0.3s ease; /* Smooth transition for bottom property */
 }

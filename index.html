@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AS91897</title>
+    <title>Refab Workshop</title>
     <!-- Linking CSS styling -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,11 +19,28 @@
         <a href="/contacts.html">Contact us</a>
     </nav>
     <section>
-        <h2>Main page</h2>
-        <p>This is a basic website created using HTML.</p>
+        <div class="section-text">
+            <h2>Main page</h2>
+            <p>This is a basic website created using HTML.</p>
+        </div>
+        <img class="section-image" src="Table_1.JPG" alt="Images">
     </section>
     <footer>
-        <p>&copy; 2024 AS91897. All Rights Reserved.</p>
+        <p>&copy; 2024 Refab Workshop. All Rights Reserved.</p>
     </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.querySelector('footer');
+            var scrollHeight = document.documentElement.scrollHeight;
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var clientHeight = document.documentElement.clientHeight;
+
+            if (scrollHeight - scrollTop === clientHeight) {
+                footer.style.bottom = '0';
+            } else {
+                footer.style.bottom = '-100px';
+            }
+        });
+    </script>
 </body>
 </html>
