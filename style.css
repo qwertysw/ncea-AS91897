@@ -10,10 +10,10 @@ body {
 /* Styling header */
 header {
     position: relative; /* Position relative for absolute positioning of overlay */
-    background-image: url('longpickle.jpg'); /* Change to your image path */
+    background-image: url('WebsiteBanner.svg'); /* Change to your image path */
     background-size: cover;
     background-position: center;
-    padding: 200px 20px; /* Adjust padding */
+    padding: 400px 20px; /* Adjust padding */
     text-align: center;
 }
 
@@ -39,9 +39,10 @@ header h1 {
 /* Adjust logo position */
 header img {
     position: absolute;
-    top: 20px; /* Adjust top position */
-    left: 20px; /* Adjust left position */
-    height: 60px; /* Adjust height */
+    top: 50%; /* Center the logo vertically */
+    left: 50%; /* Center the logo horizontally */
+    transform: translate(-50%, -50%); /* Move the logo back by half its size */
+    height: 300px; /* Increase the size of the logo */
 }
 
 /* Styling navigation */
