@@ -9,11 +9,11 @@ body {
 
 /* Styling header */
 header {
-    position: relative; /* Position relative for absolute positioning of overlay */
-    background-image: url('WebsiteBanner.svg'); /* Change to your image path */
-    background-size: cover;
+    position: relative;
+    background-image: url('WebsiteBanner.jpg');
+    background-size: calc(100% - 700px); /* Adjust based on your padding */
     background-position: center;
-    padding: 400px 20px; /* Adjust padding */
+    padding: 300px; /* Adjust padding */
     text-align: center;
 }
 
@@ -47,9 +47,10 @@ header img {
 
 /* Styling navigation */
 nav {
+    font-size: 24px;
     background-color: transparent; /* Set background color to transparent */
     color: #fff;
-    text-align: right; /* Align text to the right */
+    text-align: center; /* Align text to the right */
     position: absolute; /* Position at the top */
     top: 180px; /* Stick to the top with additional offset */
     right: 20px; /* Adjust right position */
