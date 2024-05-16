@@ -11,9 +11,9 @@ body {
 header {
     position: relative;
     background-image: url('WebsiteBanner.jpg');
-    background-size: calc(100% - 700px); /* Adjust based on your padding */
+    background-size: cover; /* Ensure the background image covers the header */
     background-position: center;
-    padding: 300px; /* Adjust padding */
+    padding: 100px; /* Adjust padding */
     text-align: center;
 }
 
@@ -42,7 +42,9 @@ header img {
     top: 50%; /* Center the logo vertically */
     left: 50%; /* Center the logo horizontally */
     transform: translate(-50%, -50%); /* Move the logo back by half its size */
-    height: 300px; /* Increase the size of the logo */
+    height: 20vw; /* Responsive height based on viewport width */
+    max-height: 800px; /* Max height for larger screens */
+    min-height: 100px; /* Min height for smaller screens */
 }
 
 /* Styling navigation */
@@ -52,7 +54,7 @@ nav {
     color: #fff;
     text-align: center; /* Align text to the right */
     position: absolute; /* Position at the top */
-    top: 180px; /* Stick to the top with additional offset */
+    top: 20px; /* Stick to the top */
     right: 20px; /* Adjust right position */
     z-index: 1; /* Ensure it's above the overlay */
 }
@@ -72,7 +74,8 @@ nav a:hover {
 /* Styling sections */
 section {
     display: flex; /* Use flexbox */
-    padding: 300px 20px; /* Padding adjusted */
+    flex-direction: column; /* Stack elements vertically on small screens */
+    padding: 20px; /* Padding adjusted */
     background-color: #fff; /* White background */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
@@ -81,16 +84,14 @@ section {
 
 .section-text {
     flex: 1; /* Take remaining space */
-    margin-right: 20px; /* Adjust margin between text and image */
+    margin-bottom: 20px; /* Add margin between text and image */
 }
 
 .section-image {
     flex-shrink: 0; /* Prevent image from shrinking */
-    width: 600px; /* Adjust image width */
+    width: 100%; /* Full width on mobile */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px; /* Rounded corners */
-    margin-right: 200px; /* Adjust margin between text and image */
-    margin-top: -100px; /* Adjust the image upward */
 }
 
 /* Styling footer */
@@ -100,8 +101,42 @@ footer {
     text-align: center;
     padding: 20px 0;
     position: fixed;
-    bottom: -100px;
+    bottom: 0; /* Stick to the bottom */
     left: 0;
     width: 100%;
     transition: bottom 0.3s ease; /* Smooth transition for bottom property */
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    header {
+        padding: 300px; /* Increase padding */
+    }
+    header img {
+        height: 25vw; /* Responsive height based on viewport width */
+    }
+    nav {
+        top: 180px; /* Adjust top position */
+    }
+    section {
+        flex-direction: row; /* Arrange items in a row */
+        padding: 300px 20px; /* Increase padding */
+    }
+    .section-text {
+        margin-right: 20px; /* Adjust margin between text and image */
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+    .section-image {
+        width: 600px; /* Set fixed width */
+        margin-right: 200px; /* Adjust margin */
+        margin-top: -100px; /* Adjust the image upward */
+    }
+}
+
+/* Smaller buttons on mobile devices */
+@media (max-width: 600px) {
+    nav a {
+        font-size: 16px; /* Smaller font size */
+        padding: 5px 10px; /* Smaller padding */
+    }
 }
