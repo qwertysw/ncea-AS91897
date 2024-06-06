@@ -5,20 +5,19 @@
     box-sizing: border-box;
 }
 
+/* Body styling with background image and font settings */
 body {
     min-height: 100vh;
-    background: url('laptop.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Navigation bar styling */
 nav {
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Navigation list styling */
 nav ul {
     width: 100%;
     list-style: none;
@@ -27,10 +26,12 @@ nav ul {
     align-items: center;
 }
 
+/* Navigation list item styling */
 nav li {
     height: 50px;
 }
 
+/* Navigation links styling */
 nav a {
     height: 100%;
     padding: 0 30px;
@@ -40,14 +41,17 @@ nav a {
     color: black;
 }
 
+/* Hover effect for navigation links */
 nav a:hover {
     background-color: #f0f0f0;
 }
 
+/* Style for the first list item in navigation */
 nav li:first-child {
     margin-right: auto;
 }
 
+/* Sidebar styling */
 .sidebar {
     position: fixed;
     top: 0;
@@ -64,19 +68,22 @@ nav li:first-child {
     justify-content: flex-start;
 }
 
+/* Sidebar list item styling */
 .sidebar li {
     width: 100%;
 }
 
+/* Sidebar links styling */
 .sidebar a {
     width: 100%;
 }
 
+/* Menu button styling (hidden by default) */
 .menu-button {
     display: none;
 }
 
-/* Styling header */
+/* Header styling with background image and text alignment */
 header {
     position: relative;
     background-image: url('WebsiteBanner.jpg');
@@ -86,7 +93,7 @@ header {
     text-align: center;
 }
 
-/* Overlay to slightly darken the background image */
+/* Overlay for darkening the background image in the header */
 header::before {
     content: "";
     position: absolute;
@@ -97,6 +104,7 @@ header::before {
     background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity for darkness */
 }
 
+/* Header text styling */
 header h1 {
     font-size: 36px; /* Increase font size for better readability */
     margin-top: 20px; /* Adjust margin */
@@ -175,7 +183,7 @@ nav a.active {
     color: white;
 }
 
-/* Styling sections */
+/* Section styling */
 section {
     display: flex; /* Use flexbox */
     flex-direction: column; /* Stack elements vertically on small screens */
@@ -198,7 +206,7 @@ section {
     border-radius: 5px; /* Rounded corners */
 }
 
-/* Styling footer */
+/* Footer styling */
 footer {
     background-color: #333;
     color: #fff;
@@ -211,7 +219,23 @@ footer {
     transition: bottom 0.3s ease; /* Smooth transition for bottom property */
 }
 
-/* Media Queries */
+/* Slideshow container styling */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slideshow-container img {
+    width: 100%;
+    display: none;
+}
+
+.slideshow-container img.active {
+    display: block;
+}
+
+/* Media queries for responsiveness */
 @media (min-width: 600px) {
     header {
         padding: 300px; /* Increase padding */
@@ -241,7 +265,6 @@ footer {
     }
 }
 
-/* Smaller buttons on mobile devices */
 @media (max-width: 600px) {
     nav a {
         font-size: 16px; /* Smaller font size */

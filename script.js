@@ -10,6 +10,38 @@ function hideSidebar(){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    const slideshowContainer = document.getElementById('slideshow');
+    const folderPath = 'Slideshow/'; // Path to folder containing images
+    const imageExtensions = ['jpg', 'jpeg', 'png', 'gif']; // Add more image extensions if needed
+
+    // Fetch images from the folder
+    fetch(folderPath)
+        .then(response => response.text())
+        .then(text => {
+            const parser = new DOMParser();
+            const htmlDocument = parser.parseFromString(text, 'text/html');
+            const links = htmlDocument.querySelectorAll('a');
+
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                const extension = href.split('.').pop().toLowerCase();
+                if (imageExtensions.includes(extension)) {
+                    const img = document.createElement('img');
+                    img.src = href;
+                    slideshowContainer.appendChild(img);
+                }
+            });
+        })
+        .catch(error => console.error('Error fetching images:', error));
+        
+    let currentIndex = 0;
+    setInterval(() => {
+        const imgs = slideshowContainer.getElementsByTagName('img');
+        imgs[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % imgs.length;
+        imgs[currentIndex].classList.add('active');
+    }, 3000); // Change image every 3 seconds
+
     // Handle the dropdown menu for mobile
     const dropbtn = document.querySelector('.dropbtn');
     const dropdownContent = document.querySelector('.dropdown-content');
