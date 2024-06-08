@@ -4,77 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refab Workshop</title>
-    <!-- Linking CSS styling -->
     <link rel="stylesheet" href="style.css">
-    <!-- Linking JavaScript -->
     <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <!-- Logo linking to home page -->
-        <a href="/index.html"><img src="Refab Workshop logo.svg" alt="Refab Workshop Logo"></a>
+        <a href="#home"><img src="Refab Workshop logo.svg" alt="Refab Workshop Logo"></a>
     </header>
     <nav>
-        <a href="/index.html" class="active">Home</a>
-        <a href="/about.html">About us</a>
-        <a href="/contacts.html">Contact us</a>
+        <!-- Sidebar -->
+        <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#contact">Contact us</a></li>
+        </ul>
+        <ul>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+        </ul>
     </nav>
     <section id="home">
         <div class="section-text">
             <h2>Main page</h2>
             <p>This is a basic website created using HTML.</p>
         </div>
-        <!-- Content from index.html -->
-        <header>
-            <a href="#home"><img src="Refab Workshop logo.svg" alt="Refab Workshop Logo"></a>
-        </header>
-        <nav>
-            <!-- Sidebar -->
-            <ul class="sidebar">
-                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#contact">Contact us</a></li>
-            </ul>
-            <ul>
-                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-            </ul>
-        </nav>
-        <section id="home">
-            <div class="section-text">
-                <h2>Main page</h2>
-                <p>This is a basic website created using HTML.</p>
-            </div>
-            <img class="section-image" src="Table_1.JPG" alt="Images">
-        </section>
-        <section id="about">
-            <div class="section-text">
-                <h2>About Refab Workshop</h2>
-                <p>Welcome to Refab Workshop! As someone with a passion for both architecture and woodworking, I found solace in tinkering with wood during the COVID-19 lockdowns. What started as a simple hobby quickly blossomed into something more meaningful as I discovered the joy of restoring and upcycling old furniture.</p>
-
-                <p>The name "Refab Workshop" means to take outdated furniture and make it fabulous again. Equipped with a full array of tools and resources, Refab Furniture is dedicated to the repair and restoration of all kinds of furniture. From sanders to spray painting equipment, we have everything needed to give each piece a professional finish.</p>
-                    
-                <p>Our process begins with scouring platforms like Facebook Marketplace and TradeMe for hidden gems waiting to be revitalized. Once in our workshop, these pieces are stripped down, sanded, and refinished with care. Whether it's a fresh coat of paint to add a pop of color or a clear finish to highlight the beautiful wood grain, I strive to bring out the best in each piece.</p>
-                    
-                <p>Join us at Refab Workshop as we breathe new life into old furniture and create pieces that are both beautiful and functional. Let us help you transform your space with our unique and sustainable approach to furniture restoration.</p>
-            </div>
-        </section>
-        <section id="contact">
-            <div class="section-text">
-                <h2>Contacts here</h2>
-                <p>This is where you put the contacts</p>
-            </div>
-        </section>
-        <!-- End of content from index.html -->
+        <img class="section-image" src="Table_1.JPG" alt="Images">
     </section>
-    <!-- Separate section for the slideshow container -->
-    <section class="slideshow-section">
-        <h1>If you are interested, here is some of my work</h1>
-        <!-- Slideshow container for images -->
-        <div class="slideshow-container" id="slideshow">
+    <section id="about">
+        <div class="section-text">
+            <h2>About Refab Workshop</h2>
+            <p>Welcome to Refab Workshop! As someone with a passion for both architecture and woodworking, I found solace in tinkering with wood during the COVID-19 lockdowns. What started as a simple hobby quickly blossomed into something more meaningful as I discovered the joy of restoring and upcycling old furniture.</p>
+
+            <p>The name "Refab Workshop" means to take outdated furniture and make it fabulous again. Equipped with a full array of tools and resources, Refab Furniture is dedicated to the repair and restoration of all kinds of furniture. From sanders to spray painting equipment, we have everything needed to give each piece a professional finish.</p>
+                
+            <p>Our process begins with scouring platforms like Facebook Marketplace and TradeMe for hidden gems waiting to be revitalized. Once in our workshop, these pieces are stripped down, sanded, and refinished with care. Whether it's a fresh coat of paint to add a pop of color or a clear finish to highlight the beautiful wood grain, I strive to bring out the best in each piece.</p>
+                
+            <p>Join us at Refab Workshop as we breathe new life into old furniture and create pieces that are both beautiful and functional. Let us help you transform your space with our unique and sustainable approach to furniture restoration.</p>
         </div>
-        <!-- Navigation circles for the slideshow -->
-        <div class="navigation-circles" id="navigationCircles">
+    </section>
+    <section id="contact">
+        <div class="section-text">
+            <h2>Contacts here</h2>
+            <p>This is where you put the contacts</p>
         </div>
     </section>
     <footer id="footer">
