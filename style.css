@@ -219,20 +219,57 @@ footer {
     transition: bottom 0.3s ease; /* Smooth transition for bottom property */
 }
 
+/* Slideshow section styling */
+.slideshow-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
 /* Slideshow container styling */
 .slideshow-container {
     position: relative;
     max-width: 100%;
-    margin: auto;
+    overflow: hidden;
 }
 
+/* Slideshow image styling */
 .slideshow-container img {
-    width: 100%;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
     display: none;
 }
 
+/* Active image */
 .slideshow-container img.active {
     display: block;
+}
+
+/* Navigation circles container */
+.navigation-circles {
+    margin-top: 20px; /* Adjust margin */
+    text-align: center; /* Center the dots */
+}
+
+/* Navigation circle styling */
+.navigation-circle {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px; /* Adjust margin between circles */
+    cursor: pointer;
+    display: inline-block; /* Display circles inline */
+}
+
+/* Active navigation circle styling */
+.navigation-circle.active {
+    background-color: #555;
 }
 
 /* Media queries for responsiveness */

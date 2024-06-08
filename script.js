@@ -11,6 +11,7 @@ function hideSidebar(){
 
 document.addEventListener('DOMContentLoaded', function() {
     const slideshowContainer = document.getElementById('slideshow');
+    const navigationCirclesContainer = document.getElementById('navigationCircles');
     const folderPath = 'Slideshow/'; // Path to folder containing images
     const imageExtensions = ['jpg', 'jpeg', 'png', 'gif']; // Add more image extensions if needed
 
@@ -29,17 +30,38 @@ document.addEventListener('DOMContentLoaded', function() {
                     const img = document.createElement('img');
                     img.src = href;
                     slideshowContainer.appendChild(img);
+                    createNavigationCircle(navigationCirclesContainer, href);
                 }
             });
         })
         .catch(error => console.error('Error fetching images:', error));
         
     let currentIndex = 0;
-    setInterval(() => {
-        const imgs = slideshowContainer.getElementsByTagName('img');
+    const imgs = slideshowContainer.getElementsByTagName('img');
+    const navigationCircles = navigationCirclesContainer.children;
+
+    function showSlide(index) {
         imgs[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % imgs.length;
+        navigationCircles[currentIndex].classList.remove('active');
+        currentIndex = index;
         imgs[currentIndex].classList.add('active');
+        navigationCircles[currentIndex].classList.add('active');
+    }
+
+    function createNavigationCircle(container, imageUrl) {
+        const circle = document.createElement('div');
+        circle.classList.add('navigation-circle');
+        container.appendChild(circle);
+
+        circle.addEventListener('click', function() {
+            const index = Array.from(navigationCircles).indexOf(circle);
+            showSlide(index);
+        });
+    }
+
+    setInterval(() => {
+        const nextIndex = (currentIndex + 1) % imgs.length;
+        showSlide(nextIndex);
     }, 3000); // Change image every 3 seconds
 
     // Handle the dropdown menu for mobile
