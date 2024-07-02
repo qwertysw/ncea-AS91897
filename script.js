@@ -12,7 +12,7 @@ function hideSidebar(){
 document.addEventListener('DOMContentLoaded', function() {
     const slideshowContainer = document.getElementById('slideshow');
     const navigationCirclesContainer = document.getElementById('navigationCircles');
-    const folderPath = 'Slideshow/'; // Path to folder containing images
+    const folderPath = './Slideshow'; // Path to folder containing images
     const imageExtensions = ['jpg', 'jpeg', 'png', 'gif']; // Add more image extensions if needed
 
     // Fetch images from the folder
