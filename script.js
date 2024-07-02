@@ -1,3 +1,7 @@
+function toggleDyslexiaFont() {
+    document.body.classList.toggle('dyslexia-font');
+}
+
 // Declare showSidebar and hideSidebar globally
 function showSidebar(){
     const sidebar = document.querySelector('.sidebar')

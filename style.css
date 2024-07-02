@@ -272,6 +272,39 @@ footer {
     background-color: #555;
 }
 
+#dyslexiaToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it's on top */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('compiled/OpenDyslexic-Regular.eot');
+    src: url('compiled/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'),
+         url('compiled/OpenDyslexic-Regular.woff2') format('woff2'),
+         url('compiled/OpenDyslexic-Regular.woff') format('woff'),
+         url('compiled/OpenDyslexic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Default font */
+}
+
+body.dyslexia-font {
+    font-family: 'OpenDyslexic', Arial, sans-serif; /* Dyslexic font */
+}
+
 /* Media queries for responsiveness */
 @media (min-width: 600px) {
     header {
