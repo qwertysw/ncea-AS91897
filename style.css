@@ -288,14 +288,7 @@ footer {
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor */
     font-size: 11px; /* Font size */
-    font-family: 'OpenDyslexic'; /* Font family for dyslexia */
-    src: url('compiled/OpenDyslexic-Regular.eot'); /* Source for older IE */
-    src: url('compiled/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'), /* IE fix */
-         url('compiled/OpenDyslexic-Regular.woff2') format('woff2'), /* Modern formats */
-         url('compiled/OpenDyslexic-Regular.woff') format('woff'),
-         url('compiled/OpenDyslexic-Regular.otf') format('opentype');
-    font-weight: normal; /* Normal font weight */
-    font-style: normal; /* Normal font style */
+    font-family: 'OpenDyslexic', Arial, sans-serif; /* Specify dyslexic font */
 }
 
 /* Font face declaration for 'OpenDyslexic' */
