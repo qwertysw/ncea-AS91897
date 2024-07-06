@@ -274,7 +274,7 @@ footer {
 
 #dyslexiaToggle {
     position: fixed;
-    bottom: 20px;
+    bottom: 10px;
     right: 20px;
     z-index: 1000; /* Ensure it's on top */
     padding: 10px 20px;
@@ -283,7 +283,15 @@ footer {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 11px;
+    font-family: 'OpenDyslexic';
+    src: url('compiled/OpenDyslexic-Regular.eot');
+    src: url('compiled/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'),
+         url('compiled/OpenDyslexic-Regular.woff2') format('woff2'),
+         url('compiled/OpenDyslexic-Regular.woff') format('woff'),
+         url('compiled/OpenDyslexic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
