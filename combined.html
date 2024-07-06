@@ -8,32 +8,40 @@
     <!-- Including OpenDyslexic font -->
     <link href="https://fonts.googleapis.com/css2?family=OpenDyslexic&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
-
 </head>
 <body>
+    <!-- Header section containing logo -->
     <header>
         <a href="#home"><img src="Refab Workshop logo.svg" alt="Refab Workshop Logo"></a>
     </header>
+    <!-- Navigation bar with sidebar -->
     <nav>
-        <!-- Sidebar -->
+        <!-- Sidebar menu -->
         <ul class="sidebar">
-            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+            <li onclick="hideSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a>
+            </li>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About us</a></li>
             <li><a href="#contact">Contact us</a></li>
+            <!-- Button to toggle Dyslexia font -->
             <button id="dyslexiaToggle" onclick="toggleDyslexiaFont()">Toggle Dyslexia Font</button>
         </ul>
+        <!-- Menu button for showing the sidebar -->
         <ul>
-            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            <li class="menu-button" onclick="showSidebar()">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a>
+            </li>
         </ul>
     </nav>
+    <!-- Main content section -->
     <section>
         <div class="section-text">
             <h2>Main page</h2>
             <p>This is a basic website created using HTML.</p>
         </div>
     </section>
-    <!-- Separate section for the slideshow container -->
+    <!-- Slideshow section showcasing latest work -->
     <section class="slideshow-section">
         <h1>Here is some of my latest work</h1>
         <!-- Slideshow container for images -->
@@ -43,6 +51,7 @@
         <div class="navigation-circles" id="navigationCircles">
         </div>
     </section>
+    <!-- About section -->
     <section id="about">
         <div class="section-text">
             <h2>About Refab Workshop</h2>
@@ -55,12 +64,14 @@
             <p>Join us at Refab Workshop as we breathe new life into old furniture and create pieces that are both beautiful and functional. Let us help you transform your space with our unique and sustainable approach to furniture restoration.</p>
         </div>
     </section>
+    <!-- Contact section -->
     <section id="contact">
         <div class="section-text">
             <h2>Contacts here</h2>
             <p>This is where you put the contacts</p>
         </div>
     </section>
+    <!-- Footer section -->
     <footer id="footer">
         <p>&copy; 2024 Refab Workshop. All Rights Reserved.</p>
     </footer>

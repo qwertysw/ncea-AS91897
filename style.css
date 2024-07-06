@@ -2,100 +2,100 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure consistent box sizing */
 }
 
 /* Body styling with background image and font settings */
 body {
-    min-height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Default font family */
 }
 
 /* Navigation bar styling */
 nav {
-    background-color: white;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: white; /* White background for navigation bar */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 /* Navigation list styling */
 nav ul {
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    width: 100%; /* Full width */
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align items to the end */
+    align-items: center; /* Vertically center items */
 }
 
 /* Navigation list item styling */
 nav li {
-    height: 50px;
+    height: 50px; /* Fixed height for navigation items */
 }
 
 /* Navigation links styling */
 nav a {
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: black;
+    height: 100%; /* Full height of the parent */
+    padding: 0 30px; /* Horizontal padding */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Flexbox for vertical centering */
+    align-items: center; /* Vertically center text */
+    color: black; /* Text color */
 }
 
 /* Hover effect for navigation links */
 nav a:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Light gray background on hover */
 }
 
 /* Style for the first list item in navigation */
 nav li:first-child {
-    margin-right: auto;
+    margin-right: auto; /* Push the item to the left */
 }
 
 /* Sidebar styling */
 .sidebar {
-    position: fixed;
+    position: fixed; /* Fixed position */
     top: 0;
     right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    height: 100vh; /* Full viewport height */
+    width: 250px; /* Fixed width */
+    background-color: rgba(255, 255, 255, 0.15); /* Transparent white background */
+    backdrop-filter: blur(12px); /* Blur effect */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    list-style: none; /* Remove default list styling */
+    display: none; /* Initially hidden */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    justify-content: flex-start; /* Justify items to the start */
 }
 
 /* Sidebar list item styling */
 .sidebar li {
-    width: 100%;
+    width: 100%; /* Full width */
 }
 
 /* Sidebar links styling */
 .sidebar a {
-    width: 100%;
+    width: 100%; /* Full width */
 }
 
 /* Menu button styling (hidden by default) */
 .menu-button {
-    display: none;
+    display: none; /* Initially hidden */
 }
 
 /* Header styling with background image and text alignment */
 header {
     position: relative;
-    background-image: url('WebsiteBanner.jpg');
+    background-image: url('WebsiteBanner.jpg'); /* Background image */
     background-size: cover; /* Ensure the background image covers the header */
-    background-position: center;
+    background-position: center; /* Center the background image */
     padding: 100px; /* Adjust padding */
-    text-align: center;
+    text-align: center; /* Center text */
 }
 
 /* Overlay for darkening the background image in the header */
 header::before {
-    content: "";
+    content: ""; /* Empty content for the pseudo-element */
     position: absolute;
     top: 0;
     left: 0;
@@ -126,9 +126,9 @@ header img {
 
 /* Styling navigation */
 nav {
-    font-size: 24px;
+    font-size: 24px; /* Font size for navigation text */
     background-color: transparent; /* Set background color to transparent */
-    color: #fff;
+    color: #fff; /* White text color */
     text-align: center; /* Align text to the center */
     position: absolute; /* Position at the top */
     top: 20px; /* Stick to the top */
@@ -136,51 +136,58 @@ nav {
     z-index: 1; /* Ensure it's above the overlay */
 }
 
+/* Dropdown menu styling */
 .dropdown {
-    position: relative;
-    display: inline-block;
+    position: relative; /* Relative positioning for absolute child */
+    display: inline-block; /* Inline block for dropdown */
 }
 
 .dropbtn {
-    background-color: #333;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+    background-color: #333; /* Dark background color */
+    color: white; /* White text color */
+    padding: 16px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Dropdown content styling */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    display: none; /* Hidden by default */
+    position: absolute; /* Absolute positioning */
+    background-color: #f9f9f9; /* Light background color */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+    z-index: 1; /* Ensure it's above other content */
 }
 
+/* Dropdown links styling */
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    color: black; /* Black text color */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block display for full width */
 }
 
+/* Hover effect for dropdown links */
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Light gray background on hover */
 }
 
+/* Show dropdown content on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* Display the content */
 }
 
+/* Change dropdown button background on hover */
 .dropdown:hover .dropbtn {
-    background-color: #555;
+    background-color: #555; /* Darker background color */
 }
 
+/* Active navigation link styling */
 nav a.active {
-    background-color: #333;
-    color: white;
+    background-color: #333; /* Dark background color */
+    color: white; /* White text color */
 }
 
 /* Section styling */
@@ -194,11 +201,13 @@ section {
     margin-bottom: 20px; /* Margin added between sections */
 }
 
+/* Section text styling */
 .section-text {
     flex: 1; /* Take remaining space */
     margin-bottom: 20px; /* Add margin between text and image */
 }
 
+/* Section image styling */
 .section-image {
     flex-shrink: 0; /* Prevent image from shrinking */
     width: 100%; /* Full width on mobile */
@@ -208,165 +217,161 @@ section {
 
 /* Footer styling */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Center text */
+    padding: 20px 0; /* Vertical padding */
+    position: fixed; /* Fixed position */
     bottom: 0; /* Stick to the bottom */
-    left: 0;
-    width: 100%;
+    left: 0; /* Stick to the left */
+    width: 100%; /* Full width */
     transition: bottom 0.3s ease; /* Smooth transition for bottom property */
 }
 
 /* Slideshow section styling */
 .slideshow-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
+    position: relative; /* Relative positioning */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    min-height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0; /* Light gray background color */
 }
 
 /* Slideshow container styling */
 .slideshow-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
+    position: relative; /* Relative positioning */
+    max-width: 100%; /* Full width */
+    overflow: hidden; /* Hide overflow */
 }
 
 /* Slideshow image styling */
 .slideshow-container img {
-    width: 600px;
-    height: 400px;
-    object-fit: cover;
-    display: none;
+    width: 600px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Cover the container */
+    display: none; /* Initially hidden */
 }
 
 /* Active image */
 .slideshow-container img.active {
-    display: block;
-}
-
-/* Navigation circles container */
-.navigation-circles {
-    margin-top: 20px; /* Adjust margin */
-    text-align: center; /* Center the dots */
+    display: block; /* Display the active image */
 }
 
 /* Navigation circle styling */
 .navigation-circle {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
+    width: 10px; /* Circle width */
+    height: 10px; /* Circle height */
+    background-color: #ccc; /* Circle background color */
+    border-radius: 50%; /* Makes it a circle */
     margin: 0 5px; /* Adjust margin between circles */
-    cursor: pointer;
+    cursor: pointer; /* Cursor style */
     display: inline-block; /* Display circles inline */
 }
 
 /* Active navigation circle styling */
 .navigation-circle.active {
-    background-color: #555;
+    background-color: #555; /* Active circle color */
 }
 
+/* Styling for the dyslexia toggle button */
 #dyslexiaToggle {
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
+    position: fixed; /* Fixed position */
+    bottom: 10px; /* Distance from bottom */
+    right: 20px; /* Distance from right */
     z-index: 1000; /* Ensure it's on top */
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 11px;
-    font-family: 'OpenDyslexic';
-    src: url('compiled/OpenDyslexic-Regular.eot');
-    src: url('compiled/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'),
-         url('compiled/OpenDyslexic-Regular.woff2') format('woff2'),
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 11px; /* Font size */
+    font-family: 'OpenDyslexic'; /* Font family for dyslexia */
+    src: url('compiled/OpenDyslexic-Regular.eot'); /* Source for older IE */
+    src: url('compiled/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'), /* IE fix */
+         url('compiled/OpenDyslexic-Regular.woff2') format('woff2'), /* Modern formats */
          url('compiled/OpenDyslexic-Regular.woff') format('woff'),
          url('compiled/OpenDyslexic-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: normal; /* Normal font weight */
+    font-style: normal; /* Normal font style */
 }
 
+/* Font face declaration for 'OpenDyslexic' */
 @font-face {
-    font-family: 'OpenDyslexic';
-    src: url('compiled/OpenDyslexic-Regular.eot');
-    src: url('compiled/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'),
-         url('compiled/OpenDyslexic-Regular.woff2') format('woff2'),
+    font-family: 'OpenDyslexic'; /* Font family name */
+    src: url('compiled/OpenDyslexic-Regular.eot'); /* Source for older IE */
+    src: url('compiled/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'), /* IE fix */
+         url('compiled/OpenDyslexic-Regular.woff2') format('woff2'), /* Modern formats */
          url('compiled/OpenDyslexic-Regular.woff') format('woff'),
          url('compiled/OpenDyslexic-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: normal; /* Normal font weight */
+    font-style: normal; /* Normal font style */
 }
 
+/* Default body styling */
 body {
     font-family: Arial, sans-serif; /* Default font */
 }
 
+/* Body styling when dyslexia mode is active */
 body.dyslexia-font {
     font-family: 'OpenDyslexic', Arial, sans-serif; /* Dyslexic font */
 }
 
-/* Media queries for responsiveness */
+/* Media queries for screens wider than 600px */
 @media (min-width: 600px) {
     header {
-        padding: 300px; /* Increase padding */
+        padding: 300px; /* Increased padding */
     }
     header img {
         height: 25vw; /* Responsive height based on viewport width */
     }
     nav {
-        top: 180px; /* Adjust top position */
+        top: 180px; /* Adjusted top position */
     }
     section {
-        flex-direction: row; /* Arrange items in a row */
-        padding: 300px 20px; /* Increase padding */
+        flex-direction: row; /* Items arranged in a row */
+        padding: 300px 20px; /* Increased padding */
     }
     .section-text {
-        margin-right: 20px; /* Adjust margin between text and image */
-        margin-bottom: 0; /* Remove bottom margin */
+        margin-right: 20px; /* Adjusted margin */
+        margin-bottom: 0; /* No bottom margin */
     }
     .section-image {
-        width: 600px; /* Set fixed width */
-        margin-right: 200px; /* Adjust margin */
-        margin-top: -100px; /* Adjust the image upward */
+        width: 600px; /* Fixed width */
+        margin-right: 200px; /* Adjusted margin */
+        margin-top: -100px; /* Image moved upward */
     }
-
     .sidebar {
-        width: 100%;
+        width: 100%; /* Full width */
     }
 }
 
+/* Media queries for screens narrower than 600px */
 @media (max-width: 600px) {
     nav a {
         font-size: 16px; /* Smaller font size */
         padding: 5px 10px; /* Smaller padding */
     }
     section {
-        flex-direction: column;
-        padding: 20px;
+        flex-direction: column; /* Items stacked in a column */
+        padding: 20px; /* Default padding */
     }
     .section-image {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 0;
+        width: 100%; /* Full width */
+        margin-right: 0; /* No margin */
+        margin-top: 0; /* No margin */
     }
-
     /* Sidebar */
     .sidebar.active {
-        display: flex;
+        display: flex; /* Flex display */
     }
     .hideOnMobile {
-        display: none;
+        display: none; /* Hidden on mobile */
     }
-
     .menu-button {
-        display: block;
+        display: block; /* Displayed as block */
     }
 }
