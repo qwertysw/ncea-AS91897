@@ -289,7 +289,67 @@ footer {
     cursor: pointer; /* Pointer cursor */
     font-size: 11px; /* Font size */
     font-family: 'OpenDyslexic', Arial, sans-serif; /* Specify dyslexic font */
+    transition: background-color 0.3s, transform 0.3s;
 }
+
+#dyslexiaToggle:hover{
+    transform: scale(1.05);
+}
+
+#translateToMaori {
+    display: block;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1000;
+    padding: 12px 24px;
+    background-color: #D32F2F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#translateToMaori:hover {
+    background-color: #B71C1C;
+    transform: scale(1.05);
+}
+
+#translateBack {
+    display: block;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 1000;
+    padding: 12px 24px;
+    background-color: #D32F2F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#translateBack:hover {
+    background-color: #B71C1C;
+    transform: scale(1.05);
+}
+
+/* Hide Weglot widget popup */
+.weglot-popup {
+    display: none !important;
+}
+
+/* Hide Weglot floating button */
+.weglot-container {
+    display: none !important;
+}
+
 
 /* Font face declaration for 'OpenDyslexic' */
 @font-face {

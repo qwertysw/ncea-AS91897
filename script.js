@@ -1,3 +1,46 @@
+// Initialize Weglot with the default language set to English
+Weglot.initialize({
+    api_key: 'wg_1e8b2fa4bbc931db8e42c028780baebc9',
+    originalLanguage: 'en' // Set default language to English
+});
+
+// Function to switch to Māori language
+function translateToMaori() {
+    Weglot.switchTo('mi'); // Switch to Māori (language code 'mi')
+    updateButtonVisibility();
+}
+
+// Function to switch back to English
+function translateBack() {
+    Weglot.switchTo('en'); // Switch to English (language code 'en')
+    updateButtonVisibility();
+}
+
+// Update button visibility and text based on the current language
+function updateButtonVisibility() {
+    const translateToMaoriButton = document.getElementById('translateToMaori');
+    const translateBackButton = document.getElementById('translateBack');
+
+    if (Weglot.getCurrentLang() === 'mi') {
+        translateToMaoriButton.style.display = 'none';
+        translateBackButton.style.display = 'block';
+        translateBackButton.textContent = 'Translate to English'; // Ensure the button text is in English
+    } else {
+        translateToMaoriButton.style.display = 'block';
+        translateBackButton.style.display = 'none';
+    }
+}
+
+// Ensure buttons are correctly displayed when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    updateButtonVisibility();
+});
+
+// Monitor Weglot language changes and update button visibility accordingly
+Weglot.on('languageChanged', function() {
+    updateButtonVisibility();
+});
+
 // Function to toggle the Dyslexia-friendly font
 function toggleDyslexiaFont() {
     // Toggle the 'dyslexia-font' class on the body element
@@ -5,18 +48,18 @@ function toggleDyslexiaFont() {
 }
 
 // Declare showSidebar and hideSidebar globally
-function showSidebar(){
+function showSidebar() {
     // Select the sidebar element
-    const sidebar = document.querySelector('.sidebar')
+    const sidebar = document.querySelector('.sidebar');
     // Set the display style to 'flex' to show the sidebar
-    sidebar.style.display = 'flex'
+    sidebar.style.display = 'flex';
 }
 
-function hideSidebar(){
+function hideSidebar() {
     // Select the sidebar element
-    const sidebar = document.querySelector('.sidebar')
+    const sidebar = document.querySelector('.sidebar');
     // Set the display style to 'none' to hide the sidebar
-    sidebar.style.display = 'none'
+    sidebar.style.display = 'none';
 }
 
 // Add an event listener for when the DOM content is loaded
@@ -60,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         })
         .catch(error => console.error('Error fetching images:', error));
-        
+
     // Initialize the current index for the slideshow
     let currentIndex = 0;
     // Get all img elements in the slideshow container
